@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="corner_text" type="id" />
+    <item name="corner_view" type="id" />
+    <item name="row_header" type="id" />
+    <item name="row_header_textView" type="id" />
+</resources>
