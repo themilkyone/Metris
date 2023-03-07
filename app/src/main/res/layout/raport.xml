@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:id="@+id/raport">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Raport">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/lgrey"
+            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="@+id/guideline33" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/lgrey"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/uwagi1" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/lgrey"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/uwagi2" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/lgrey"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/uwagi3" />
+
+        <CheckBox
+            android:id="@+id/checkboxdata"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:background="@drawable/border"
+            android:checked="false"
+            android:gravity="center"
+            android:text="INNA DATA"
+            android:textColor="@color/checkbox"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/logo"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toBottomOf="@+id/tvdate" />
+
+        <EditText
+            android:id="@+id/dataa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:focusable="false"
+            android:fontFamily="@font/lato"
+            android:gravity="right"
+            android:hint="WYBIERZ DATĘ"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkboxdata"
+            app:layout_constraintEnd_toEndOf="@+id/checkboxdata"
+            app:layout_constraintStart_toStartOf="@+id/checkboxdata"
+            app:layout_constraintTop_toTopOf="@+id/checkboxdata" />
+
+        <TextView
+            android:id="@+id/tvdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text="date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxdata"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/logo" />
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="0sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxdata"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/logo" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="0sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxdata"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+        <TextView
+            android:id="@+id/dzien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="0sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxdata"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+        <TextView
+            android:id="@+id/miesiac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="0sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxdata"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+        <TextView
+            android:id="@+id/rok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="0sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxdata"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+        <TextView
+            android:id="@+id/dzientyg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="0sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxdata"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="15dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="69dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="84dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.48" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.21" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.59" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.59" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline11"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="@+id/guideline9"
+            app:layout_constraintVertical_bias="0.498"
+            app:srcCompat="@drawable/logoh" />
+
+        <EditText
+            android:id="@+id/nr1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/numer_projektu"
+            android:inputType="number"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnercontainer1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline19"
+            app:layout_constraintTop_toTopOf="@+id/spinnercontainer1" />
+
+        <EditText
+            android:id="@+id/nr2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/numer_projektu"
+            android:inputType="number"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnercontainer3"
+            app:layout_constraintEnd_toEndOf="@+id/nr1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/nr1"
+            app:layout_constraintTop_toTopOf="@+id/spinnercontainer3" />
+
+        <EditText
+            android:id="@+id/nr3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/numer_projektu"
+            android:inputType="number"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnercontainer5"
+            app:layout_constraintEnd_toEndOf="@+id/nr2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/nr2"
+            app:layout_constraintTop_toTopOf="@+id/spinnercontainer5" />
+
+        <EditText
+            android:id="@+id/nr4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/numer_projektu"
+            android:inputType="number"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnercontainer7"
+            app:layout_constraintEnd_toEndOf="@+id/nr3"
+            app:layout_constraintStart_toStartOf="@+id/nr3"
+            app:layout_constraintTop_toTopOf="@+id/spinnercontainer7" />
+
+        <EditText
+            android:id="@+id/uwagi1"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border"
+            android:gravity="left"
+            android:hint="@string/uwagi"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/czasj1" />
+
+        <EditText
+            android:id="@+id/uwagi2"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border"
+            android:gravity="left"
+            android:hint="@string/uwagi"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/czasj2" />
+
+        <EditText
+            android:id="@+id/uwagi3"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border"
+            android:gravity="left"
+            android:hint="@string/uwagi"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/czasj3" />
+
+        <EditText
+            android:id="@+id/uwagi4"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border"
+            android:gravity="left"
+            android:hint="@string/uwagi"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/czasj4" />
+
+        <EditText
+            android:id="@+id/podzial1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/podzia"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnercontainer2"
+            app:layout_constraintEnd_toStartOf="@+id/ilosc1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/spinnercontainer2"
+            app:layout_constraintTop_toTopOf="@+id/ilosc1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/podzial2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/podzia"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnercontainer4"
+            app:layout_constraintEnd_toEndOf="@+id/podzial1"
+            app:layout_constraintStart_toEndOf="@+id/spinnercontainer3"
+            app:layout_constraintStart_toStartOf="@+id/podzial1"
+            app:layout_constraintTop_toTopOf="@+id/spinnercontainer4" />
+
+        <EditText
+            android:id="@+id/podzial3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/podzia"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnercontainer6"
+            app:layout_constraintEnd_toEndOf="@+id/podzial2"
+            app:layout_constraintStart_toStartOf="@+id/podzial2"
+            app:layout_constraintTop_toTopOf="@+id/spinnercontainer6" />
+
+        <EditText
+            android:id="@+id/podzial4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/podzia"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnercontainer8"
+            app:layout_constraintEnd_toEndOf="@+id/podzial3"
+            app:layout_constraintStart_toStartOf="@+id/podzial3"
+            app:layout_constraintTop_toTopOf="@+id/spinnercontainer8" />
+
+        <EditText
+            android:id="@+id/czasj1"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/czas_dojazdu"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline26"
+            app:layout_constraintStart_toEndOf="@+id/spinnercontainer2"
+            app:layout_constraintStart_toStartOf="@+id/czasp1"
+            app:layout_constraintTop_toBottomOf="@+id/czasp1" />
+
+        <EditText
+            android:id="@+id/czasj2"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/czas_dojazdu"
+            android:inputType="number"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/czasp2"
+            app:layout_constraintStart_toStartOf="@+id/czasp2"
+            app:layout_constraintTop_toBottomOf="@+id/czasp2" />
+
+        <EditText
+            android:id="@+id/czasj3"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/czas_dojazdu"
+            android:inputType="number"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/czasp3"
+            app:layout_constraintStart_toEndOf="@+id/spinnercontainer2"
+            app:layout_constraintStart_toStartOf="@+id/czasp3"
+            app:layout_constraintTop_toBottomOf="@+id/czasp3" />
+
+        <EditText
+            android:id="@+id/czasj4"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/czas_dojazdu"
+            android:inputType="number"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/czasp4"
+            app:layout_constraintStart_toEndOf="@+id/spinnercontainer2"
+            app:layout_constraintStart_toStartOf="@+id/czasp4"
+            app:layout_constraintTop_toBottomOf="@+id/czasp4" />
+
+        <EditText
+            android:id="@+id/czasp1"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/czas_pracy"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline26"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="@+id/guideline33" />
+
+        <EditText
+            android:id="@+id/czasp2"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/czas_pracy"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/czasp1"
+            app:layout_constraintStart_toStartOf="@+id/czasp1"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <EditText
+            android:id="@+id/czasp3"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/czas_pracy"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/czasp2"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <EditText
+            android:id="@+id/czasp4"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/czas_pracy"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/czasj3"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="@+id/view4" />
+
+        <EditText
+            android:id="@+id/ilosc1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/ilo"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnercontainer2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/podzial1"
+            app:layout_constraintTop_toTopOf="@+id/spinnercontainer2" />
+
+        <EditText
+            android:id="@+id/ilosc2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/ilo"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/podzial2"
+            app:layout_constraintEnd_toEndOf="@+id/ilosc1"
+            app:layout_constraintStart_toStartOf="@+id/ilosc1"
+            app:layout_constraintTop_toTopOf="@+id/podzial2" />
+
+        <EditText
+            android:id="@+id/ilosc3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/ilo"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/podzial3"
+            app:layout_constraintEnd_toEndOf="@+id/ilosc2"
+            app:layout_constraintStart_toStartOf="@+id/ilosc2"
+            app:layout_constraintTop_toTopOf="@+id/spinnercontainer6" />
+
+        <EditText
+            android:id="@+id/ilosc4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="@string/ilo"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/lllgrey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/podzial4"
+            app:layout_constraintEnd_toEndOf="@+id/ilosc3"
+            app:layout_constraintStart_toStartOf="@+id/ilosc3"
+            app:layout_constraintTop_toTopOf="@+id/podzial4" />
+
+
+        <RelativeLayout
+            android:id="@+id/spinnercontainer1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/czasp1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline19"
+            app:layout_constraintStart_toEndOf="@+id/czasp1"
+            app:layout_constraintTop_toTopOf="@+id/czasp1"
+            tools:ignore="ExtraText">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinnercontainer3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/czasp2"
+            app:layout_constraintEnd_toEndOf="@+id/spinnercontainer1"
+            app:layout_constraintStart_toStartOf="@+id/spinnercontainer1"
+            app:layout_constraintTop_toTopOf="@+id/czasp2"
+            tools:ignore="ExtraText">
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinnercontainer5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/czasp3"
+            app:layout_constraintEnd_toStartOf="@+id/guideline19"
+            app:layout_constraintStart_toStartOf="@+id/spinnercontainer4"
+            app:layout_constraintTop_toTopOf="@+id/czasp3">
+
+            <Spinner
+                android:id="@+id/spinner5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinnercontainer7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/czasp4"
+            app:layout_constraintEnd_toEndOf="@+id/spinnercontainer6"
+            app:layout_constraintStart_toStartOf="@+id/spinnercontainer5"
+            app:layout_constraintTop_toTopOf="@+id/czasp4"
+            tools:ignore="ExtraText">
+
+            <Spinner
+                android:id="@+id/spinner7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinnercontainer2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/czasj1"
+            app:layout_constraintEnd_toEndOf="@+id/spinnercontainer1"
+            app:layout_constraintStart_toEndOf="@+id/czasj1"
+            app:layout_constraintStart_toStartOf="@+id/spinnercontainer1"
+            app:layout_constraintTop_toTopOf="@+id/czasj1"
+            tools:ignore="ExtraText">
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinnercontainer4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/czasj2"
+            app:layout_constraintEnd_toEndOf="@+id/spinnercontainer3"
+            app:layout_constraintStart_toStartOf="@+id/spinnercontainer3"
+            app:layout_constraintTop_toTopOf="@+id/czasj2"
+            tools:ignore="ExtraText">
+
+            <Spinner
+                android:id="@+id/spinner4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinnercontainer6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/czasj3"
+            app:layout_constraintEnd_toEndOf="@+id/spinnercontainer4"
+            app:layout_constraintStart_toStartOf="@+id/spinnercontainer3"
+            app:layout_constraintTop_toTopOf="@+id/czasj3"
+            tools:ignore="ExtraText">
+
+            <Spinner
+                android:id="@+id/spinner6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinnercontainer8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/czasj4"
+            app:layout_constraintEnd_toEndOf="@+id/spinnercontainer6"
+            app:layout_constraintStart_toStartOf="@+id/spinnercontainer6"
+            app:layout_constraintTop_toTopOf="@+id/czasj4"
+            tools:ignore="ExtraText">
+
+            <Spinner
+                android:id="@+id/spinner8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/wyslane"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Moje raporty"
+            app:layout_constraintBottom_toBottomOf="@+id/wyslij"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/wyslij"
+            app:layout_constraintTop_toTopOf="@+id/wyslij" />
+
+        <Button
+            android:id="@+id/wyslij"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="4dp"
+            android:text="Wyślij"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/wyslane"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/uwagi4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
